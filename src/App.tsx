@@ -5,10 +5,9 @@ import doctorTwo from "./doctor-two.jpg";
 import doctorThree from "./doctor-three.jpg";
 import UserProfile from "./components/user-profile/user-profile";
 
-import Arrow from "material-design-icons/navigation/svg/production/ic_arrow_back_36px.svg";
 import UserPassword from "./components/user-password/user-password";
 
-interface User {
+export interface User {
   name: string;
   image: string;
   password: string;
@@ -23,6 +22,8 @@ const users: User[] = [
 const App: React.FC = () => {
   const [currentUser, setCurrentUser] = useState<User | undefined>(undefined);
 
+  const [failedAttempts, setFailedAttempts] = useState<number[]>([]);
+
   return (
     <div className="App">
       <div className="user-list">
@@ -34,9 +35,15 @@ const App: React.FC = () => {
           ) : null
         )}
       </div>
-      {currentUser ? (
-        <UserPassword goBack={() => setCurrentUser(undefined)}></UserPassword>
-      ) : null}
+      <UserPassword
+        user={currentUser}
+        goBack={() => setCurrentUser(undefined)}
+        failed={() => setFailedAttempts([...failedAttempts, Date.now()])}
+        blocked={
+          failedAttempts.filter(date => Date.now() - date < 5 * 60 * 1000)
+            .length > 4
+        }
+      ></UserPassword>
     </div>
   );
 };

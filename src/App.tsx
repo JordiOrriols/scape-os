@@ -6,6 +6,7 @@ import doctorThree from "./doctor-three.jpg";
 import UserProfile from "./components/user-profile/user-profile";
 
 import Arrow from "material-design-icons/navigation/svg/production/ic_arrow_back_36px.svg";
+import UserPassword from "./components/user-password/user-password";
 
 interface User {
   name: string;
@@ -34,13 +35,7 @@ const App: React.FC = () => {
         )}
       </div>
       {currentUser ? (
-        <div className="user-password">
-          <div className="user-back" onClick={() => setCurrentUser(undefined)}>
-            <Arrow></Arrow>
-          </div>
-          <input type="password" placeholder="Enter Password"></input>
-          <div className="user-space"></div>
-        </div>
+        <UserPassword goBack={() => setCurrentUser(undefined)}></UserPassword>
       ) : null}
     </div>
   );

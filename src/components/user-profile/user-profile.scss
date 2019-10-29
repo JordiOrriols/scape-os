@@ -1,0 +1,19 @@
+$image-size: 170px;
+
+.user-profile {
+  padding: 80px;
+  padding-bottom: 50px;
+
+  .user-image {
+    width: $image-size;
+    height: $image-size;
+    border-radius: $image-size;
+    object-fit: cover;
+  }
+
+  .user-name {
+    margin-top: 25px;
+    text-shadow: 4px 4px 7px #000000;
+    font-size: 27px;
+  }
+}

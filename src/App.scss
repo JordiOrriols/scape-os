@@ -1,0 +1,57 @@
+$back-button: 45px;
+$input-height: 40px;
+
+.App {
+  text-align: center;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-image: url(bg.jpg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.user-password {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  .user-back,
+  .user-space {
+    width: $back-button;
+    height: $back-button;
+    border-radius: $back-button;
+    margin: 20px;
+  }
+
+  .user-back {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  input {
+    width: 270px;
+    height: $input-height;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 5px 15px;
+    border: 0;
+    font-size: 22px;
+  }
+}

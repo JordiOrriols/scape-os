@@ -30,6 +30,7 @@ const UserPassword: React.FC<Props> = props => {
               type="password"
               placeholder="Enter Password"
               autoComplete="off"
+              onChange={() => {}}
               onKeyDown={event => {
                 if (event.keyCode === 13) {
                   if (props.user && input === props.user.password) {

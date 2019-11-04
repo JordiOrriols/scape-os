@@ -5,8 +5,9 @@ import { User } from "../../App";
 
 interface Props {
   user?: User;
-  goBack: () => void;
-  failed: () => void;
+  goBack(): void;
+  success(): void;
+  failed(): void;
   blocked: boolean;
 }
 
@@ -32,7 +33,7 @@ const UserPassword: React.FC<Props> = props => {
               onKeyDown={event => {
                 if (event.keyCode === 13) {
                   if (props.user && input === props.user.password) {
-                    alert("hola");
+                    props.success();
                   } else {
                     setInput("");
                     props.failed();

@@ -26,7 +26,7 @@ const App: React.FC = () => {
     <div className="App">
       {
         currentUser ?
-          <Desktop user={currentUser}></Desktop>
+          <Desktop user={currentUser} logout={() => setCurrentUser(undefined)}></Desktop>
           :
           <Login users={users} onLogin={setCurrentUser}></Login>
       }

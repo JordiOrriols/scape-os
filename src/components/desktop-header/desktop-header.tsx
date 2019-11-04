@@ -4,6 +4,7 @@ import { User } from "../../App";
 
 interface Props {
     user: User;
+    logout() : void;
 }
 
 const DesktopHeader: React.FC<Props> = (props) => {
@@ -53,7 +54,7 @@ const DesktopHeader: React.FC<Props> = (props) => {
                             <li>Restart...</li>
                             <li>Shut Down...</li>
                             <li className="divider"></li>
-                            <li>Log Out...</li>
+                            <li onClick={props.logout}>Log Out...</li>
                         </ul>
                     </li>
                     <li className="here">

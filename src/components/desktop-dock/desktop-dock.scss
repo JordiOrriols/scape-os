@@ -2,9 +2,11 @@
 /*	01.	Dock
 /*-----------------------------------------------------------------------------------*/
 
+$dockRadius: 4px;
+
 .dock {
 	position: absolute;
-	bottom: 0;
+	bottom: -$dockRadius;
 	z-index: 9999;
 	width: 100%;
 	text-align: center;
@@ -12,30 +14,17 @@
 .dock ul {
 	position: relative;
 	display: inline-block;
-	padding: 0 5px;
 	margin: 0;
-	background:url(dock-bg.png) repeat-x bottom;
-}
-.dock ul:before, .dock ul:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 38px;
-}
-.dock ul:before {
-	left: -38px;
-	background: url(dock-bg-left.png) no-repeat left bottom;
-}
-.dock ul:after {
-	right: -38px;
-	background: url(dock-bg-right.png) no-repeat right bottom;
+	backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
+    border-radius: $dockRadius;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 4px;
 }
 .dock li {
 	display: inline-block;
 	position: relative;
-	margin: 0 0 15px 0;
-	-webkit-box-reflect: below -16px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(91%, rgba(255, 255, 255, .1)), color-stop(91.01%, transparent), to(transparent));
+	margin-bottom: 6px;
 }
 .dock a {
 	display: block;

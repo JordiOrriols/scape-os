@@ -1,7 +1,7 @@
-$image-size: 100px;
+$image-size: 85px;
 
 .user-profile {
-  padding: 80px;
+  padding: 60px;
   padding-bottom: 20px;
 
   .user-image {
@@ -12,8 +12,8 @@ $image-size: 100px;
   }
 
   .user-name {
-    margin-top: 25px;
+    margin-top: 10px;
     text-shadow: 4px 4px 7px #000000;
-    font-size: 20px;
+    font-size: 18px;
   }
 }

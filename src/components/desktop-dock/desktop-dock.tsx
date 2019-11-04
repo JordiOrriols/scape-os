@@ -13,7 +13,7 @@ const DesktopDock: React.FC<Props> = () => {
             <ul>
                 {
                     applications.map(app => <li id={app.id} key={app.id}>
-                        <a>
+                        <a href="#">
                             <em><span>{app.name}</span></em>
                             <img src={app.src} alt={app.name} />
                         </a>

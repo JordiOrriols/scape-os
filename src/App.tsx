@@ -23,10 +23,14 @@ const App: React.FC = () => {
   const [currentUser, setCurrentUser] = useState<User | undefined>(undefined);
 
   return (
-    currentUser?
-    <Desktop user={currentUser}></Desktop>
-    :
-    <Login users={users} onLogin={setCurrentUser}></Login>
+    <div className="App">
+      {
+        currentUser ?
+          <Desktop user={currentUser}></Desktop>
+          :
+          <Login users={users} onLogin={setCurrentUser}></Login>
+      }
+    </div>
   );
 };
 

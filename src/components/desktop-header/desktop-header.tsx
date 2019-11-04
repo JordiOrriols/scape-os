@@ -232,9 +232,9 @@ const DesktopHeader: React.FC<Props> = (props) => {
                     <li className="time">
                         <ul>
                             <li id="DateAbbr"> </li>
-                            <li className="hour"> </li>
+                            <li className="hour">{new Date().getHours()}</li>
                             <li className="point">:</li>
-                            <li className="mins"> </li>
+                            <li className="mins">{new Date().getMinutes()}</li>
                         </ul>
                     </li>
                     <li className="username">

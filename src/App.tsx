@@ -4,6 +4,7 @@ import doctorOne from "./doctor-one.jpg";
 import doctorTwo from "./doctor-two.jpg";
 import doctorThree from "./doctor-three.jpg";
 import Login from "./routes/login/login";
+import Desktop from "./routes/desktop/desktop";
 
 export interface User {
   name: string;
@@ -23,7 +24,7 @@ const App: React.FC = () => {
 
   return (
     currentUser?
-    <div>Welcome</div>
+    <Desktop user={currentUser}></Desktop>
     :
     <Login users={users} onLogin={setCurrentUser}></Login>
   );

@@ -1,18 +1,10 @@
 .App {
-  text-align: center;
-
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
   background-image: url(mojave-night.webp);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .user-list {

@@ -16,7 +16,7 @@ const Login: React.FC<Props> = (props) => {
     const [failedAttempts, setFailedAttempts] = useState<number[]>([]);
 
     return (
-        <React.Fragment>
+        <div className="login">
             <div className="user-list">
                 {props.users.map(user =>
                     currentUser === user || !currentUser ? (
@@ -36,7 +36,7 @@ const Login: React.FC<Props> = (props) => {
                         .length > 4
                 }
             ></UserPassword>
-        </React.Fragment>
+        </div>
     );
 };
 

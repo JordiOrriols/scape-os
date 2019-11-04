@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ReactComponent as ArrowBack } from "./arrowback.svg";
 import "./user-password.scss";
 import { User } from "../../App";
-import { userInfo } from "os";
 
 interface Props {
   user?: User;

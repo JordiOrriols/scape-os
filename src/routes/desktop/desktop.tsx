@@ -17,7 +17,7 @@ const Desktop: React.FC<Props> = (props) => {
   return (
     <div id="page" className={"vis"}>
       <DesktopHeader user={props.user} logout={props.logout}></DesktopHeader>
-      <DesktopDock openApp={(app: App) => setOpenedApps([...openedApps, app])}></DesktopDock>
+      <DesktopDock openedApps={openedApps} openApp={(app: App) => setOpenedApps([...openedApps, app])}></DesktopDock>
       {openedApps.map(app => app.window)}
     </div>
   );

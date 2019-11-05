@@ -6,7 +6,7 @@ $dockRadius: 4px;
 
 .dock {
 	position: absolute;
-	bottom: -$dockRadius;
+	bottom: -6px;
 	z-index: 9999;
 	width: 100%;
 	text-align: center;
@@ -115,4 +115,15 @@ $dockRadius: 4px;
 @-moz-keyframes bounce {
 	  0% { -moz-transform: translateY(0); }
 	100% { -moz-transform: translateY(-20px); }
+}
+
+$dotSize: 4px;
+
+.dock .dot {
+	height: $dotSize;
+    width: $dotSize;
+    background: rgba(255,255,255,0.4);
+    margin: auto;
+    border-radius: $dotSize;
+    margin-top: 2px;
 }

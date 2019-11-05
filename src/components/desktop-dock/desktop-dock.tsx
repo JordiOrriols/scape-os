@@ -4,6 +4,7 @@ import "./desktop-dock.scss";
 import { applications, App } from "../../apps/apps";
 
 interface Props {
+    openedApps: App[];
     openApp(app: App): void;
 }
 
@@ -17,6 +18,7 @@ const DesktopDock: React.FC<Props> = (props) => {
                         <a href="#" onClick={() => props.openApp(app)}>
                             <em><span>{app.name}</span></em>
                             <img src={app.src} alt={app.name} />
+                            {props.openedApps.indexOf(app) !== -1 ? <div className="dot"></div> : null}
                         </a>
                     </li>
                     )

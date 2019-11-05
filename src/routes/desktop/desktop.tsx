@@ -14,10 +14,14 @@ const Desktop: React.FC<Props> = (props) => {
 
   const [openedApps, setOpenedApps] = useState<App[]>([]);
 
+  const openApp = (app: App) => {
+    if (openedApps.indexOf(app) === -1) setOpenedApps([...openedApps, app])
+  }
+
   return (
     <div id="page" className={"vis"}>
       <DesktopHeader user={props.user} logout={props.logout}></DesktopHeader>
-      <DesktopDock openedApps={openedApps} openApp={(app: App) => setOpenedApps([...openedApps, app])}></DesktopDock>
+      <DesktopDock openedApps={openedApps} openApp={openApp}></DesktopDock>
       {openedApps.map(app => app.window)}
     </div>
   );

@@ -31,14 +31,14 @@ export const applications: App[] = [
     { id: 'facetime', name: 'FaceTime', src: FaceTimeIcon, window: errorComp },
     { id: 'imovie', name: 'iMovie', src: IMovieIcon, window: errorComp },
     { id: 'mail', name: 'Mail', src: MailIcon, window: errorComp },
-    { id: 'messages', name: 'Messages', src: MessagesIcon , window: errorComp},
+    { id: 'messages', name: 'Messages', src: MessagesIcon, window: errorComp },
     { id: 'numbers', name: 'Numbers', src: NumbersIcon, window: errorComp },
     { id: 'padlock', name: 'PadLock', src: PadLockIcon, window: errorComp },
     { id: 'pages', name: 'Pages', src: PagesIcon, window: errorComp },
     { id: 'photos', name: 'Photos', src: PhotosIcon, window: errorComp },
-    { id: 'preview', name: 'Preview', src: PreviewIcon , window: errorComp},
-    { id: 'reminders', name: 'Reminders', src: RemindersIcon , window: errorComp},
-    { id: 'safari', name: 'Safari', src: SafariIcon , window: errorComp},
-    { id: 'textedit', name: 'TextEdit', src: TextEditIcon , window: errorComp},
-    { id: 'timemachine', name: 'TimeMachine', src: TimeMachineIcon , window: errorComp}
+    { id: 'preview', name: 'Preview', src: PreviewIcon, window: errorComp },
+    { id: 'reminders', name: 'Reminders', src: RemindersIcon, window: errorComp },
+    { id: 'safari', name: 'Safari', src: SafariIcon, window: errorComp },
+    { id: 'textedit', name: 'TextEdit', src: TextEditIcon, window: errorComp },
+    { id: 'timemachine', name: 'TimeMachine', src: TimeMachineIcon, window: errorComp }
 ];

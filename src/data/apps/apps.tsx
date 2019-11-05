@@ -15,6 +15,7 @@ import RemindersIcon from "./Reminders.png";
 import SafariIcon from "./Safari.png";
 import TextEditIcon from "./TextEdit.png";
 import TimeMachineIcon from "./TimeMachine.png";
+import ErrorWindow from "../../components/window-error/window-error";
 
 export interface App {
     id: string;
@@ -23,7 +24,7 @@ export interface App {
     window: React.Component | React.ReactElement;
 }
 
-const errorComp = <div>Something was wrong. This program can not be oppened.</div>
+const errorComp = <ErrorWindow title= "Hola" text="Something was wrong. This program can not be oppened."/>
 
 export const applications: App[] = [
     { id: 'calendar', name: 'Calendar', src: CalendarIcon, window: errorComp },

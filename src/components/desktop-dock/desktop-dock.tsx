@@ -1,7 +1,7 @@
 import React from "react";
 import "./desktop-dock.scss";
 
-import { applications, App } from "../../apps/apps";
+import { applications, App } from "../../data/apps/apps";
 
 interface Props {
     openedApps: App[];

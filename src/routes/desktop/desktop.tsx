@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./desktop.scss";
-import { User } from "../../App";
 import DesktopHeader from "../../components/desktop-header/desktop-header";
 import DesktopDock from "../../components/desktop-dock/desktop-dock";
-import { App } from "../../apps/apps";
+import { App } from "../../data/apps/apps";
+import { User } from "../../data/users/users";
 
 interface Props {
   user: User;

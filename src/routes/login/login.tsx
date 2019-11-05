@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./login.scss";
 import UserProfile from "../../components/user-profile/user-profile";
 import UserPassword from "../../components/user-password/user-password";
-import { User } from "../../App";
+import { User } from "../../data/users/users";
 
 interface Props {
     users: User[];

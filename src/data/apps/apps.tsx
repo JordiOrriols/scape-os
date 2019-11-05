@@ -17,14 +17,17 @@ import TextEditIcon from "./TextEdit.png";
 import TimeMachineIcon from "./TimeMachine.png";
 import ErrorWindow from "../../components/window-error/window-error";
 
+interface windowParams{
+    onClose(): void;
+}
 export interface App {
     id: string;
     name: string;
     src: string;
-    window: React.Component | React.ReactElement;
+    window(params: windowParams): React.Component | React.ReactElement;
 }
 
-const errorComp = <ErrorWindow title= "Hola" text="Something was wrong. This program can not be oppened."/>
+const errorComp = (params: windowParams) => <ErrorWindow onClose={params.onClose} title= "Hola" text="Something was wrong. This program can not be oppened."/>
 
 export const applications: App[] = [
     { id: 'calendar', name: 'Calendar', src: CalendarIcon, window: errorComp },

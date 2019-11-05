@@ -6,6 +6,7 @@ import React from "react";
 interface Props {
   title: string;
   text: string;
+  onClose(): void;
 }
 
 const ErrorWindow: React.FC<Props> = props => {
@@ -16,7 +17,7 @@ const ErrorWindow: React.FC<Props> = props => {
         height="100px"
         padding="10px"
       >
-        <TitleBar title={props.title} controls onCloseClick={() => alert('close')}/>
+        <TitleBar title={props.title} controls onCloseClick={props.onClose}/>
         <Text>{props.text}</Text>
       </Window>
   );

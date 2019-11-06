@@ -6,32 +6,38 @@ import { App } from "../../data/apps/apps";
 import { User } from "../../data/users/users";
 
 interface Props {
-  user: User;
-  logout(): void;
+    user: User;
+    logout(): void;
 }
 
-const Desktop: React.FC<Props> = (props) => {
+const Desktop: React.FC<Props> = props => {
+    const [openedApps, setOpenedApps] = useState<App[]>([]);
 
-  const [openedApps, setOpenedApps] = useState<App[]>([]);
+    const openApp = (app: App) => {
+        if (openedApps.indexOf(app) === -1) setOpenedApps([...openedApps, app]);
+    };
 
-  const openApp = (app: App) => {
-    if (openedApps.indexOf(app) === -1) setOpenedApps([...openedApps, app])
-  }
+    const closeApp = (app: App) => () => {
+        if (openedApps.indexOf(app) !== -1) setOpenedApps(openedApps.filter(openedApp => openedApp !== app));
+    };
 
-  const closeApp = (app: App) => () => {
-    if (openedApps.indexOf(app) !== -1) setOpenedApps(openedApps.filter(openedApp => openedApp !== app))
-  }
-
-  return (
-    <div id="page" className={"vis"}>
-      <DesktopHeader user={props.user} logout={props.logout}></DesktopHeader>
-      <DesktopDock openedApps={openedApps} openApp={openApp}></DesktopDock>
-      <div className="window-space">
-        {openedApps.map(app => app.window({ onClose: closeApp(app) }))}
-      </div>
-
-    </div>
-  );
+    return (
+        <div id="page" className={"vis"}>
+            <DesktopHeader user={props.user} logout={props.logout}></DesktopHeader>
+            <DesktopDock openedApps={openedApps} openApp={openApp}></DesktopDock>
+            <div className="window-space">
+                {openedApps.map(app => (
+                    <div className={"window-container"} key={app.id}>
+                        {app.window({
+                            onClose: closeApp(app),
+                            id: app.id,
+                            title: app.name
+                        })}
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 };
 
 export default Desktop;

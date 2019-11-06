@@ -17,7 +17,9 @@ import TextEditIcon from "./TextEdit.png";
 import TimeMachineIcon from "./TimeMachine.png";
 import ErrorWindow from "../../components/window-error/window-error";
 
-interface windowParams{
+interface windowParams {
+    id: string;
+    title: string;
     onClose(): void;
 }
 export interface App {
@@ -27,22 +29,29 @@ export interface App {
     window(params: windowParams): React.Component | React.ReactElement;
 }
 
-const errorComp = (params: windowParams) => <ErrorWindow onClose={params.onClose} title= "Hola" text="Something was wrong. This program can not be oppened."/>
+const errorComp = (params: windowParams) => (
+    <ErrorWindow onClose={params.onClose} title={params.title} text="Something was wrong. This program can not be oppened." />
+);
 
 export const applications: App[] = [
-    { id: 'calendar', name: 'Calendar', src: CalendarIcon, window: errorComp },
-    { id: 'contacts', name: 'Contacts', src: ContactsIcon, window: errorComp },
-    { id: 'facetime', name: 'FaceTime', src: FaceTimeIcon, window: errorComp },
-    { id: 'imovie', name: 'iMovie', src: IMovieIcon, window: errorComp },
-    { id: 'mail', name: 'Mail', src: MailIcon, window: errorComp },
-    { id: 'messages', name: 'Messages', src: MessagesIcon, window: errorComp },
-    { id: 'numbers', name: 'Numbers', src: NumbersIcon, window: errorComp },
-    { id: 'padlock', name: 'PadLock', src: PadLockIcon, window: errorComp },
-    { id: 'pages', name: 'Pages', src: PagesIcon, window: errorComp },
-    { id: 'photos', name: 'Photos', src: PhotosIcon, window: errorComp },
-    { id: 'preview', name: 'Preview', src: PreviewIcon, window: errorComp },
-    { id: 'reminders', name: 'Reminders', src: RemindersIcon, window: errorComp },
-    { id: 'safari', name: 'Safari', src: SafariIcon, window: errorComp },
-    { id: 'textedit', name: 'TextEdit', src: TextEditIcon, window: errorComp },
-    { id: 'timemachine', name: 'TimeMachine', src: TimeMachineIcon, window: errorComp }
+    { id: "calendar", name: "Calendar", src: CalendarIcon, window: errorComp },
+    { id: "contacts", name: "Contacts", src: ContactsIcon, window: errorComp },
+    { id: "facetime", name: "FaceTime", src: FaceTimeIcon, window: errorComp },
+    { id: "imovie", name: "iMovie", src: IMovieIcon, window: errorComp },
+    { id: "mail", name: "Mail", src: MailIcon, window: errorComp },
+    { id: "messages", name: "Messages", src: MessagesIcon, window: errorComp },
+    { id: "numbers", name: "Numbers", src: NumbersIcon, window: errorComp },
+    { id: "padlock", name: "PadLock", src: PadLockIcon, window: errorComp },
+    { id: "pages", name: "Pages", src: PagesIcon, window: errorComp },
+    { id: "photos", name: "Photos", src: PhotosIcon, window: errorComp },
+    { id: "preview", name: "Preview", src: PreviewIcon, window: errorComp },
+    { id: "reminders", name: "Reminders", src: RemindersIcon, window: errorComp },
+    { id: "safari", name: "Safari", src: SafariIcon, window: errorComp },
+    { id: "textedit", name: "TextEdit", src: TextEditIcon, window: errorComp },
+    {
+        id: "timemachine",
+        name: "TimeMachine",
+        src: TimeMachineIcon,
+        window: errorComp
+    }
 ];

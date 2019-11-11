@@ -1,26 +1,27 @@
 .window-space {
-    padding: 10px;
-    padding-top: 30px;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    .window-container {
-        width: 0px;
-        height: 0px;
-    }
+  padding: 10px;
+  padding-top: 30px;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  .window-container {
+    width: 0px;
+    height: 0px;
+  }
 }
 
 #page {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 }
 #page.vis {
-    visibility: visible;
-    opacity: 1;
-    z-index: 0;
-    -moz-animation: none;
-    -webkit-animation: none;
+  visibility: visible;
+  opacity: 1;
+  z-index: 0;
+  -moz-animation: none;
+  -webkit-animation: none;
 }

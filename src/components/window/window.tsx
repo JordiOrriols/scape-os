@@ -1,19 +1,21 @@
-import { Window, TitleBar, Text } from "react-desktop/macOs";
+import { Window, TitleBar } from "react-desktop/macOs";
 import Draggable from "react-draggable";
 import React from "react";
 
 interface Props {
+    height: string;
+    width: string;
+    padding: string;
     title: string;
-    text: string;
     onClose(): void;
 }
 
 const AppWindow: React.FC<Props> = props => {
     return (
         <Draggable bounds=".window-space" defaultPosition={{ x: 0, y: 0 }} scale={1}>
-            <Window chrome width="300px" height="100px" padding="10px">
+            <Window chrome width={props.width} height={props.height} padding={props.padding}>
                 <TitleBar title={props.title} controls onCloseClick={props.onClose} />
-                <Text>{props.text}</Text>
+                {props.children}
             </Window>
         </Draggable>
     );

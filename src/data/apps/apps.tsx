@@ -16,6 +16,7 @@ import SafariIcon from "./Safari.png";
 import TextEditIcon from "./TextEdit.png";
 import TimeMachineIcon from "./TimeMachine.png";
 import ErrorWindow from "../../components/window-error/window-error";
+import Finder from "../../components/finder/finder";
 
 interface windowParams {
     id: string;
@@ -33,6 +34,10 @@ const errorComp = (params: windowParams) => (
     <ErrorWindow onClose={params.onClose} title={params.title} text="Something was wrong. This program can not be oppened." />
 );
 
+const finderComp = (params: windowParams) => (
+    <Finder onClose={params.onClose} title={params.title} />
+);
+
 export const applications: App[] = [
     { id: "calendar", name: "Calendar", src: CalendarIcon, window: errorComp },
     { id: "contacts", name: "Contacts", src: ContactsIcon, window: errorComp },
@@ -41,7 +46,7 @@ export const applications: App[] = [
     { id: "mail", name: "Mail", src: MailIcon, window: errorComp },
     { id: "messages", name: "Messages", src: MessagesIcon, window: errorComp },
     { id: "numbers", name: "Numbers", src: NumbersIcon, window: errorComp },
-    { id: "padlock", name: "PadLock", src: PadLockIcon, window: errorComp },
+    { id: "padlock", name: "PadLock", src: PadLockIcon, window: finderComp },
     { id: "pages", name: "Pages", src: PagesIcon, window: errorComp },
     { id: "photos", name: "Photos", src: PhotosIcon, window: errorComp },
     { id: "preview", name: "Preview", src: PreviewIcon, window: errorComp },

@@ -1,9 +1,10 @@
 import React from "react";
 import "./desktop-dock.scss";
 
-import { applications, App } from "../../data/apps/apps";
+import { App } from "../../data/apps/apps";
 
 interface Props {
+    apps: App[];
     openedApps: App[];
     openApp(app: App): void;
 }
@@ -14,7 +15,7 @@ const DesktopDock: React.FC<Props> = (props) => {
         <div className={"dock"} >
             <ul>
                 {
-                    applications.map(app => <li id={app.id} key={app.id}>
+                    props.apps.map(app => <li id={app.id} key={app.id}>
                         <a href="#" onClick={() => props.openApp(app)}>
                             <em><span>{app.name}</span></em>
                             <img src={app.src} alt={app.name} />

@@ -1,15 +1,18 @@
 import doctorOne from "./doctor-one.jpg";
 import doctorTwo from "./doctor-two.jpg";
 import doctorThree from "./doctor-three.jpg";
+import { App, appsWithSecurity, appsWithFiles, appsWithContacts } from "../apps/apps";
 
 export interface User {
     name: string;
     image: string;
     password: string;
+    apps: App[];
 }
 
 export const users: User[] = [
-    { name: "Doctor Mike", image: doctorOne, password: "1234" },
-    { name: "Evil Gerard", image: doctorTwo, password: "4321" },
-    { name: "Pamplinas", image: doctorThree, password: "1221" }
+    { name: "Admin", image: doctorOne, password: "0000", apps: appsWithContacts },
+    { name: "Vera Gedroitz", image: doctorOne, password: "12051968", apps: appsWithContacts },
+    { name: "Max Eitingon", image: doctorTwo, password: "27061965", apps: appsWithFiles },
+    { name: "Alexis Labhart", image: doctorThree, password: "11121959", apps: appsWithSecurity }
 ];

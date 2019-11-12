@@ -24,7 +24,7 @@ const Desktop: React.FC<Props> = props => {
     return (
         <div id="page" className={"vis"}>
             <DesktopHeader user={props.user} logout={props.logout}></DesktopHeader>
-            <DesktopDock openedApps={openedApps} openApp={openApp}></DesktopDock>
+            <DesktopDock apps={props.user.apps} openedApps={openedApps} openApp={openApp}></DesktopDock>
             <div className="window-space">
                 {openedApps.map(app => (
                     <div className={"window-container"} key={app.id}>

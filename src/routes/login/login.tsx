@@ -9,15 +9,13 @@ interface Props {
     onLogin(user: User): void;
 }
 
-
-
 const Login: React.FC<Props> = (props) => {
 
     const [currentUser, setCurrentUser] = useState<User | undefined>(undefined);
 
     const [failedAttempts, setFailedAttempts] = useState<number[]>([]);
 
-    const fiveMinutes = 0.5 * 60 * 1000;
+    const fiveMinutes = 5 * 60 * 1000;
 
     const cleanFailedAfterFiveMinutes = () => {
         setTimeout(() => {

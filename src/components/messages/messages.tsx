@@ -20,9 +20,9 @@ const Messages: React.FC<Props> = props => {
                 <ul className="people">
                     <li className="person" data-chat="person1">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/thomas.jpg" alt="" />
-                        <span className="name">Thomas Bangalter</span>
-                        <span className="time">2:09 PM</span>
-                        <span className="preview">I was wondering...</span>
+                        <span className="name">Max Eitingon</span>
+                        <span className="time">6:48 PM</span>
+                        <span className="preview">Tranquila, ya lo he hecho antes...</span>
                     </li>
                     <li className="person" data-chat="person2">
                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/dog.png" alt="" />
@@ -52,20 +52,14 @@ you blind bitch</span>
                 </ul>
             </div>
             <div className="right">
-                <div className="top"><span>To: <span className="name">Dog Woofson</span></span></div>
+                <div className="top"><span>To: <span className="name">Max Eitingon</span></span></div>
                 <div className="chat active-chat" data-chat="person1">
                     <div className="conversation-start">
                         <span>Today, 6:48 AM</span>
                     </div>
-                    <div className="bubble you">
-                        Hello,
-                </div>
-                    <div className="bubble you">
-                        it's me.
-                </div>
-                    <div className="bubble you">
-                        I was wondering...
-                </div>
+                    <div className="bubble you">La suma de mi padre, mi madre, y mis hermanitos te serviran para entrar!</div>
+                    <div className="bubble you">No lo olvides...</div>
+                    <div className="bubble me">Tranquila, ya lo he hecho antes...</div>
                 </div>
                 <div className="write">
                     <a href="javascript:;" className="write-link attach"></a>

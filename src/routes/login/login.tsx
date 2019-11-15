@@ -9,11 +9,21 @@ interface Props {
     onLogin(user: User): void;
 }
 
+
+
 const Login: React.FC<Props> = (props) => {
 
     const [currentUser, setCurrentUser] = useState<User | undefined>(undefined);
 
     const [failedAttempts, setFailedAttempts] = useState<number[]>([]);
+
+    const fiveMinutes = 0.5 * 60 * 1000;
+
+    const cleanFailedAfterFiveMinutes = () => {
+        setTimeout(() => {
+            setFailedAttempts([]);
+        }, fiveMinutes);
+    }
 
     return (
         <div className="login">
@@ -29,11 +39,14 @@ const Login: React.FC<Props> = (props) => {
             <UserPassword
                 user={currentUser}
                 goBack={() => setCurrentUser(undefined)}
-                failed={() => setFailedAttempts([...failedAttempts, Date.now()])}
+                failed={() => {
+                    const newFailed = [...failedAttempts, Date.now()];
+                    setFailedAttempts(newFailed)
+                    if (newFailed.length > 4) cleanFailedAfterFiveMinutes();
+                }}
                 success={() => { if (currentUser) props.onLogin(currentUser) }}
                 blocked={
-                    failedAttempts.filter(date => Date.now() - date < 5 * 60 * 1000)
-                        .length > 4
+                    failedAttempts.length > 4
                 }
             ></UserPassword>
         </div>

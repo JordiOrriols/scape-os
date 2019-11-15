@@ -49,9 +49,13 @@ const messagesComp = (params: windowParams) => (
     <Messages onClose={params.onClose} title={params.title} />
 );
 
+const finderComp = (params: windowParams) => (
+    <Finder onClose={params.onClose} title={params.title} />
+);
+
 export const appsWithContacts: App[] = [
     { id: "messages", name: "Messages", src: MessagesIcon, window: messagesComp },
-    { id: "contacts", name: "Contacts", src: ContactsIcon, window: errorComp },
+    { id: "contacts", name: "Contacts", src: ContactsIcon, window: finderComp },
     { id: "mail", name: "Mail", src: MailIcon, window: errorComp },
     ...applications
 ];
@@ -66,11 +70,6 @@ export const appsWithSecurity: App[] = [
     },
     ...applications
 ];
-
-
-const finderComp = (params: windowParams) => (
-    <Finder onClose={params.onClose} title={params.title} />
-);
 
 export const appsWithFiles: App[] = [
     { id: "padlock", name: "PadLock", src: PadLockIcon, window: finderComp },

@@ -18,6 +18,7 @@ import TimeMachineIcon from "./TimeMachine.png";
 import ErrorWindow from "../../components/window-error/window-error";
 import Finder from "../../components/finder/finder";
 import Messages from "../../components/messages/messages";
+import SettingsWindow from "../../components/settings/settings";
 
 interface windowParams {
     id: string;
@@ -35,6 +36,11 @@ const errorComp = (params: windowParams) => (
     <ErrorWindow onClose={params.onClose} title={params.title} text="Something was wrong. This program can not be oppened." />
 );
 
+const settingsComp = (params: windowParams) => (
+    <SettingsWindow onClose={params.onClose} title={params.title} text="Something was wrong. This program can not be oppened." />
+);
+
+
 const applications: App[] = [
     { id: "facetime", name: "FaceTime", src: FaceTimeIcon, window: errorComp },
     { id: "imovie", name: "iMovie", src: IMovieIcon, window: errorComp },
@@ -42,7 +48,7 @@ const applications: App[] = [
     { id: "preview", name: "Preview", src: PreviewIcon, window: errorComp },
     { id: "reminders", name: "Reminders", src: RemindersIcon, window: errorComp },
     { id: "safari", name: "Safari", src: SafariIcon, window: errorComp },
-    { id: "textedit", name: "TextEdit", src: TextEditIcon, window: errorComp }
+    { id: "textedit", name: "TextEdit", src: TextEditIcon, window: settingsComp }
 ];
 
 const messagesComp = (params: windowParams) => (

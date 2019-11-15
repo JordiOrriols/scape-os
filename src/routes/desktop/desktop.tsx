@@ -31,7 +31,7 @@ const Desktop: React.FC<Props> = props => {
                         {app.window({
                             onClose: closeApp(app),
                             id: app.id,
-                            title: app.name
+                            title: app.title
                         })}
                     </div>
                 ))}

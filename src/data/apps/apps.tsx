@@ -28,6 +28,7 @@ interface windowParams {
 export interface App {
     id: string;
     name: string;
+    title: string;
     src: string;
     window(params: windowParams): React.Component | React.ReactElement;
 }
@@ -40,15 +41,12 @@ const settingsComp = (params: windowParams) => (
     <SettingsWindow onClose={params.onClose} title={params.title} text="Something was wrong. This program can not be oppened." />
 );
 
-
 const applications: App[] = [
-    { id: "facetime", name: "FaceTime", src: FaceTimeIcon, window: errorComp },
-    { id: "imovie", name: "iMovie", src: IMovieIcon, window: errorComp },
-    { id: "photos", name: "Photos", src: PhotosIcon, window: errorComp },
-    { id: "preview", name: "Preview", src: PreviewIcon, window: errorComp },
-    { id: "reminders", name: "Reminders", src: RemindersIcon, window: errorComp },
-    { id: "safari", name: "Safari", src: SafariIcon, window: errorComp },
-    { id: "textedit", name: "TextEdit", src: TextEditIcon, window: settingsComp }
+    { id: "facetime", name: "FaceTime", title: "FaceTime", src: FaceTimeIcon, window: errorComp },
+    { id: "imovie", name: "iMovie", title: "iMovie", src: IMovieIcon, window: errorComp },
+    { id: "photos", name: "Photos", title: "Photos", src: PhotosIcon, window: errorComp },
+    { id: "reminders", name: "Reminders", title: "Reminders", src: RemindersIcon, window: errorComp },
+    { id: "safari", name: "Safari", title: "Safari", src: SafariIcon, window: errorComp }
 ];
 
 const messagesComp = (params: windowParams) => (
@@ -60,17 +58,18 @@ const finderComp = (params: windowParams) => (
 );
 
 export const appsWithContacts: App[] = [
-    { id: "messages", name: "Messages", src: MessagesIcon, window: messagesComp },
-    { id: "contacts", name: "Contacts", src: ContactsIcon, window: finderComp },
-    { id: "mail", name: "Mail", src: MailIcon, window: errorComp },
+    { id: "messages", name: "Messages", title: "Messages", src: MessagesIcon, window: messagesComp },
+    { id: "contacts", name: "Contacts", title: "Contacts", src: ContactsIcon, window: errorComp },
+    { id: "mail", name: "Mail", title: "Mail", src: MailIcon, window: errorComp },
     ...applications
 ];
 
 export const appsWithSecurity: App[] = [
-    { id: "calendar", name: "Calendar", src: CalendarIcon, window: errorComp },
+    { id: "padlock", name: "PadLock", title: "PadLock", src: PadLockIcon, window: settingsComp },
+    { id: "calendar", name: "Calendar", title: "Calendar", src: CalendarIcon, window: errorComp },
     {
         id: "timemachine",
-        name: "TimeMachine",
+        name: "TimeMachine", title: "TimeMachine",
         src: TimeMachineIcon,
         window: errorComp
     },
@@ -78,8 +77,9 @@ export const appsWithSecurity: App[] = [
 ];
 
 export const appsWithFiles: App[] = [
-    { id: "padlock", name: "PadLock", src: PadLockIcon, window: finderComp },
-    { id: "pages", name: "Pages", src: PagesIcon, window: errorComp },
-    { id: "numbers", name: "Numbers", src: NumbersIcon, window: errorComp },
+    { id: "textedit", name: "TextEdit", title: "TextEdit - Open file",src: TextEditIcon, window: finderComp },
+    { id: "preview", name: "Preview",title: "Preview - Open file", src: PreviewIcon, window: finderComp },
+    { id: "pages", name: "Pages", title: "Pages - Open file",src: PagesIcon, window: finderComp },
+    { id: "numbers", name: "Numbers", title: "Numbers - Open file",src: NumbersIcon, window: finderComp },
     ...applications
 ];

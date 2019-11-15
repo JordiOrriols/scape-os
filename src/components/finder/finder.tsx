@@ -9,8 +9,7 @@ import "./finder.scss";
 const getSize = () => Math.floor(Math.random() * 1000)
 
 const files: FinderFile[] = [
-    { name: 'encryped-file-plan-2025.pdf', kind: 'PDF', size: getSize() },
-    { name: 'encryped-file-plan-2024.pdf', kind: 'PDF', size: getSize() },
+    { name: 'encryped-file-plan-441.pdf', kind: 'PDF', size: getSize() },
     { name: 'foto-paciente-08.jpeg', kind: 'JPEG', size: getSize() },
     { name: 'foto-paciente-05.jpeg', kind: 'JPEG', size: getSize() },
     { name: 'foto-paciente-04.jpeg', kind: 'JPEG', size: getSize() },

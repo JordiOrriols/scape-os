@@ -13,6 +13,7 @@ interface Props {
 }
 
 const FinderFiles: React.FC<Props> = props => {
+
     return (
         <div className="pane">
             <table className="table-striped">
@@ -26,7 +27,7 @@ const FinderFiles: React.FC<Props> = props => {
                 <tbody>
                     {
                         props.files.map(file =>
-                            <tr>
+                            <tr onClick={() => alert("This file is encrypted and can not be opened yet!")}>
                                 <td>{file.name}</td>
                                 <td>{file.kind}</td>
                                 <td>{file.size}kb</td>

@@ -65,7 +65,7 @@ export const appsWithContacts: App[] = [
 ];
 
 export const appsWithSecurity: App[] = [
-    { id: "padlock", name: "PadLock", title: "PadLock", src: PadLockIcon, window: settingsComp },
+    { id: "padlock", name: "Building Security", title: "Building Security", src: PadLockIcon, window: settingsComp },
     { id: "calendar", name: "Calendar", title: "Calendar", src: CalendarIcon, window: errorComp },
     {
         id: "timemachine",

@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fdcad5bf.chunk.css",
+    "main.js": "/static/js/main.3682776f.chunk.js",
+    "main.js.map": "/static/js/main.3682776f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3abaa719.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3abaa719.js.map",
+    "static/js/2.966a2f68.chunk.js": "/static/js/2.966a2f68.chunk.js",
+    "static/js/2.966a2f68.chunk.js.map": "/static/js/2.966a2f68.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7be076e52d40f544584dfa15dcf0fb54.js": "/precache-manifest.7be076e52d40f544584dfa15dcf0fb54.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.fdcad5bf.chunk.css.map": "/static/css/main.fdcad5bf.chunk.css.map",
+    "static/media/Calendar.png": "/static/media/Calendar.7221e1dd.png",
+    "static/media/Contacts.png": "/static/media/Contacts.2ff3caa9.png",
+    "static/media/FaceTime.png": "/static/media/FaceTime.23d261bd.png",
+    "static/media/Mail.png": "/static/media/Mail.036371bc.png",
+    "static/media/Messages.png": "/static/media/Messages.b5147765.png",
+    "static/media/Numbers.png": "/static/media/Numbers.898d03a7.png",
+    "static/media/PadLock.png": "/static/media/PadLock.f2e2a501.png",
+    "static/media/Pages.png": "/static/media/Pages.7a67212b.png",
+    "static/media/Photos.png": "/static/media/Photos.ea878bda.png",
+    "static/media/Preview.png": "/static/media/Preview.24338f6d.png",
+    "static/media/Reminders.png": "/static/media/Reminders.8ca24769.png",
+    "static/media/Safari.png": "/static/media/Safari.f9503493.png",
+    "static/media/TextEdit.png": "/static/media/TextEdit.d4bbe238.png",
+    "static/media/TimeMachine.png": "/static/media/TimeMachine.9eedce81.png",
+    "static/media/arrowback.81e341ef.svg": "/static/media/arrowback.81e341ef.svg",
+    "static/media/doctor-one.jpg": "/static/media/doctor-one.4c85a885.jpg",
+    "static/media/doctor-three.jpg": "/static/media/doctor-three.bbbbe0e3.jpg",
+    "static/media/doctor-two.jpg": "/static/media/doctor-two.016b99e2.jpg",
+    "static/media/iMovie.png": "/static/media/iMovie.b761330f.png",
+    "static/media/App.scss": "/static/media/mojave-night.70e89142.png",
+    "static/media/finder-nav.scss": "/static/media/photon-entypo.bf614256.woff",
+    "static/media/siren.mp3": "/static/media/siren.8d5da3b5.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3abaa719.js",
+    "static/js/2.966a2f68.chunk.js",
+    "static/css/main.fdcad5bf.chunk.css",
+    "static/js/main.3682776f.chunk.js"
+  ]
+}
